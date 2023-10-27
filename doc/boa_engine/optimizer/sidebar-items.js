@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["PassAction"],"mod":["pass","walker"],"struct":["Optimizer","OptimizerOptions","OptimizerStatistics"]};

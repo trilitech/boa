@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["f64_to_int32","f64_to_uint32"]};

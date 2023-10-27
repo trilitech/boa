@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ErrorKind"],"mod":["aggregate","eval","range","reference","syntax","type","uri"],"struct":["Error"]};

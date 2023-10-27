@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["BUF_SIZE"],"fn":["f64_to_exponential","f64_to_exponential_with_precision"],"mod":["conversions","globals"],"struct":["Number"]};

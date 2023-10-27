@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["NativeSegmenter"],"fn":["create_segment_data_object"],"mod":["iterator","options","segments"],"struct":["Segmenter"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"macro":["implement_push_numbers_no_conversion","implement_push_numbers_with_conversion"],"struct":["PushDouble","PushFloat","PushInt16","PushInt32","PushInt8"]};

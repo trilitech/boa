@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["block","break_stm","continue_stm","declaration","expression","if_stm","iteration","labelled_stm","return_stm","switch","throw","try_stm","variable","with"],"struct":["ArrayBindingPattern","ModuleItem","ModuleItemList","ObjectBindingPattern","Statement","StatementList","StatementListItem"]};

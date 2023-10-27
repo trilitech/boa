@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["AsyncGeneratorMethod","AsyncMethod","ClassElementName","CoverInitializedName","GeneratorMethod","Initializer","ObjectLiteral","PropertyDefinition","PropertyName"]};

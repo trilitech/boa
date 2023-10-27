@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["RESERVED_IDENTIFIERS_STRICT"],"struct":["Identifier"]};

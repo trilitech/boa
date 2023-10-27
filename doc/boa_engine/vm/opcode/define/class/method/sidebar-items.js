@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["DefineClassMethodByName","DefineClassMethodByValue","DefineClassStaticMethodByName","DefineClassStaticMethodByValue"]};

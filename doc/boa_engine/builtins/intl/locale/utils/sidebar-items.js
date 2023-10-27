@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["best_available_locale","best_fit_matcher","best_fit_supported_locales","best_locale_for_provider","canonicalize_locale_list","default_locale","lookup_matcher","lookup_supported_locales","resolve_locale","supported_locales","validate_extension"]};

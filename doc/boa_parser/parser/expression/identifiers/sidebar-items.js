@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["BindingIdentifier","Identifier","IdentifierReference"],"type":["LabelIdentifier"]};

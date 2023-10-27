@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["GeneratorState"],"struct":["Generator","GeneratorContext"]};

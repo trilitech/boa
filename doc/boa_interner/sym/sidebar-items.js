@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"static":["COMMON_STRINGS_UTF16","COMMON_STRINGS_UTF8"],"struct":["Sym"],"type":["Set"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DECIMAL_DIGIT","NUMBER_SIGN","URI_ALPHA_LOWER","URI_ALPHA_UPPER","URI_MARK","URI_RESERVED"],"fn":["is_uri_reserved_or_number_sign","is_uri_reserved_or_uri_unescaped_or_number_sign","is_uri_unescaped"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["RESERVED_SYMBOL_HASHES"],"enum":["WellKnown"],"fn":["get_id"],"macro":["well_known_symbols"],"struct":["Inner","JsSymbol"]};

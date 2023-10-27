@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["expression_to_formal_parameters"],"mod":["array_initializer","async_function_expression","async_generator_expression","class_expression","function_expression","generator_expression","object_initializer","template"],"struct":["CoverParenthesizedExpressionAndArrowParameterList","PrimaryExpression"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["DefinePrivateField","SetPrivateField","SetPrivateGetter","SetPrivateMethod","SetPrivateSetter"]};

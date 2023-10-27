@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FUNCTION_BREAK_TOKENS"],"struct":["BindingRestElement","FormalParameter","FormalParameters","FunctionStatementList","UniqueFormalParameters"],"type":["FunctionBody","FunctionRestParameter"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["NodeRef","NodeRefMut"],"macro":["define_visit","define_visit_mut","node_ref"],"trait":["VisitWith","Visitor","VisitorMut"]};

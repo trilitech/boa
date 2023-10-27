@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["decrement","increment","logical","void"],"struct":["BitNot","Neg","Pos","TypeOf"]};

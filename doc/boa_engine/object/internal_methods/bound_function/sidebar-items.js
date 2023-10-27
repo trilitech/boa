@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["bound_function_exotic_call","bound_function_exotic_construct"],"static":["BOUND_CONSTRUCTOR_EXOTIC_INTERNAL_METHODS","BOUND_FUNCTION_EXOTIC_INTERNAL_METHODS"]};

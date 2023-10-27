@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ClassElement"],"mod":["arrow_function","async_arrow_function","async_function","async_generator","class","generator","parameters"],"struct":["ArrowFunction","AsyncArrowFunction","AsyncFunction","AsyncGenerator","Class","FormalParameter","FormalParameterList","FormalParameterListFlags","Function","Generator","PrivateName"],"type":["FunctionBody"]};

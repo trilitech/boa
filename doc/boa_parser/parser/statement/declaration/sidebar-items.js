@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["export","hoistable","import","lexical"],"struct":["Declaration","FromClause"]};

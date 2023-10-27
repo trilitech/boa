@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["advance_string_index"],"mod":["regexp_string_iterator"],"struct":["RegExp"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ErrorHandler","LabelledItem","Statement"],"mod":["block","if","iteration","labelled","return","switch","throw","try","with"],"struct":["Block","Case","Catch","Finally","If","Labelled","Return","Switch","Throw","Try","With"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CheckReturn","GetReturnValue","Return","SetReturnValue"]};

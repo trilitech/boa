@@ -525,9 +525,9 @@ impl<'host> Context<'host> {
     }
 
     /// Get the remaining instruction count
-    #[cfg(freature = "fuzz")]
+    #[cfg(feature = "fuzz")]
     #[inline]
-    pub const fn instructions_remaining(&self) -> u64 {
+    pub const fn instructions_remaining(&self) -> usize {
         self.instructions_remaining
     }
     /// Get the [`RootShape`].

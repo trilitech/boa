@@ -7,7 +7,7 @@
 </ul>
 </div></details><h2 id="fields" class="fields small-section-header">Fields<a href="#fields" class="anchor">§</a></h2><span id="structfield.sync_iterator_record" class="structfield small-section-header"><a href="#structfield.sync_iterator_record" class="anchor field">§</a><code>sync_iterator_record: <a class="struct" href="../struct.IteratorRecord.html" title="struct boa_engine::builtins::iterable::IteratorRecord">IteratorRecord</a></code></span><h2 id="implementations" class="small-section-header">Implementations<a href="#implementations" class="anchor">§</a></h2><div id="implementations-list"><details class="toggle implementors-toggle" open><summary><section id="impl-AsyncFromSyncIterator" class="impl"><a class="src rightside" href="../../../../src/boa_engine/builtins/iterable/async_from_sync_iterator.rs.html#56-353">source</a><a href="#impl-AsyncFromSyncIterator" class="anchor">§</a><h3 class="code-header">impl <a class="struct" href="struct.AsyncFromSyncIterator.html" title="struct boa_engine::builtins::iterable::async_from_sync_iterator::AsyncFromSyncIterator">AsyncFromSyncIterator</a></h3></section></summary><div class="impl-items"><details class="toggle method-toggle" open><summary><section id="method.create" class="method"><a class="src rightside" href="../../../../src/boa_engine/builtins/iterable/async_from_sync_iterator.rs.html#63-89">source</a><h4 class="code-header">pub(crate) fn <a href="#method.create" class="fn">create</a>(
     sync_iterator_record: <a class="struct" href="../struct.IteratorRecord.html" title="struct boa_engine::builtins::iterable::IteratorRecord">IteratorRecord</a>,
-    context: &amp;mut <a class="struct" href="../../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="struct" href="../struct.IteratorRecord.html" title="struct boa_engine::builtins::iterable::IteratorRecord">IteratorRecord</a></h4></section></summary><div class="docblock"><p><code>CreateAsyncFromSyncIterator ( syncIteratorRecord )</code></p>
 <p>More information:</p>
 <ul>
@@ -16,7 +16,7 @@
 </div></details><details class="toggle method-toggle" open><summary><section id="method.next" class="method"><a class="src rightside" href="../../../../src/boa_engine/builtins/iterable/async_from_sync_iterator.rs.html#97-136">source</a><h4 class="code-header">fn <a href="#method.next" class="fn">next</a>(
     this: &amp;<a class="enum" href="../../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>%AsyncFromSyncIteratorPrototype%.next ( [ value ] )</code></p>
 <p>More information:</p>
 <ul>
@@ -25,7 +25,7 @@
 </div></details><details class="toggle method-toggle" open><summary><section id="method.return" class="method"><a class="src rightside" href="../../../../src/boa_engine/builtins/iterable/async_from_sync_iterator.rs.html#144-208">source</a><h4 class="code-header">fn <a href="#method.return" class="fn">return</a>(
     this: &amp;<a class="enum" href="../../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>%AsyncFromSyncIteratorPrototype%.return ( [ value ] )</code></p>
 <p>More information:</p>
 <ul>
@@ -34,7 +34,7 @@
 </div></details><details class="toggle method-toggle" open><summary><section id="method.throw" class="method"><a class="src rightside" href="../../../../src/boa_engine/builtins/iterable/async_from_sync_iterator.rs.html#216-280">source</a><h4 class="code-header">fn <a href="#method.throw" class="fn">throw</a>(
     this: &amp;<a class="enum" href="../../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>%AsyncFromSyncIteratorPrototype%.throw ( [ value ] )</code></p>
 <p>More information:</p>
 <ul>
@@ -43,7 +43,7 @@
 </div></details><details class="toggle method-toggle" open><summary><section id="method.continuation" class="method"><a class="src rightside" href="../../../../src/boa_engine/builtins/iterable/async_from_sync_iterator.rs.html#288-352">source</a><h4 class="code-header">fn <a href="#method.continuation" class="fn">continuation</a>(
     result: &amp;<a class="struct" href="../struct.IteratorResult.html" title="struct boa_engine::builtins::iterable::IteratorResult">IteratorResult</a>,
     promise_capability: &amp;<a class="struct" href="../../promise/struct.PromiseCapability.html" title="struct boa_engine::builtins::promise::PromiseCapability">PromiseCapability</a>,
-    context: &amp;mut <a class="struct" href="../../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>AsyncFromSyncIteratorContinuation ( result, promiseCapability )</code></p>
 <p>More information:</p>
 <ul>

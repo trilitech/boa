@@ -6,7 +6,7 @@
 </div></details><h2 id="fields" class="fields small-section-header">Fields<a href="#fields" class="anchor">§</a></h2><span id="structfield.viewed_array_buffer" class="structfield small-section-header"><a href="#structfield.viewed_array_buffer" class="anchor field">§</a><code>viewed_array_buffer: <a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a></code></span><span id="structfield.byte_length" class="structfield small-section-header"><a href="#structfield.byte_length" class="anchor field">§</a><code>byte_length: <a class="primitive" href="https://doc.rust-lang.org/1.73.0/std/primitive.u64.html">u64</a></code></span><span id="structfield.byte_offset" class="structfield small-section-header"><a href="#structfield.byte_offset" class="anchor field">§</a><code>byte_offset: <a class="primitive" href="https://doc.rust-lang.org/1.73.0/std/primitive.u64.html">u64</a></code></span><h2 id="implementations" class="small-section-header">Implementations<a href="#implementations" class="anchor">§</a></h2><div id="implementations-list"><details class="toggle implementors-toggle" open><summary><section id="impl-DataView" class="impl"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#227-973">source</a><a href="#impl-DataView" class="anchor">§</a><h3 class="code-header">impl <a class="struct" href="struct.DataView.html" title="struct boa_engine::builtins::dataview::DataView">DataView</a></h3></section></summary><div class="impl-items"><details class="toggle method-toggle" open><summary><section id="method.get_buffer" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#239-256">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_buffer" class="fn">get_buffer</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     _args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    _: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    _: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.1 get DataView.prototype.buffer</code></p>
 <p>The buffer accessor property represents the <code>ArrayBuffer</code> or <code>SharedArrayBuffer</code> referenced
 by the <code>DataView</code> at construction time.</p>
@@ -18,7 +18,7 @@ by the <code>DataView</code> at construction time.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_byte_length" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#268-296">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_byte_length" class="fn">get_byte_length</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     _args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    _: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    _: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.1 get DataView.prototype.byteLength</code></p>
 <p>The <code>byteLength</code> accessor property represents the length (in bytes) of the dataview.</p>
 <p>More information:</p>
@@ -29,7 +29,7 @@ by the <code>DataView</code> at construction time.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_byte_offset" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#309-337">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_byte_offset" class="fn">get_byte_offset</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     _args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    _: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    _: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.1 get DataView.prototype.byteOffset</code></p>
 <p>The <code>byteOffset</code> accessor property represents the offset (in bytes) of this view from the
 start of its <code>ArrayBuffer</code> or <code>SharedArrayBuffer</code>.</p>
@@ -42,7 +42,7 @@ start of its <code>ArrayBuffer</code> or <code>SharedArrayBuffer</code>.</p>
     view: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     request_index: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     is_little_endian: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.1.1 GetViewValue ( view, requestIndex, isLittleEndian, type )</code></p>
 <p>The abstract operation <code>GetViewValue</code> takes arguments view, requestIndex, <code>isLittleEndian</code>,
 and type. It is used by functions on <code>DataView</code> instances to retrieve values from the
@@ -54,7 +54,7 @@ view’s buffer.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_big_int64" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#431-441">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_big_int64" class="fn">get_big_int64</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.5 DataView.prototype.getBigInt64 ( byteOffset [ , littleEndian ] )</code></p>
 <p>The <code>getBigInt64()</code> method gets a signed 64-bit integer (long long) at the specified byte
 offset from the start of the <code>DataView</code>.</p>
@@ -66,7 +66,7 @@ offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_big_uint64" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#454-464">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_big_uint64" class="fn">get_big_uint64</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.6 DataView.prototype.getBigUint64 ( byteOffset [ , littleEndian ] )</code></p>
 <p>The <code>getBigUint64()</code> method gets an unsigned 64-bit integer (unsigned long long) at the
 specified byte offset from the start of the <code>DataView</code>.</p>
@@ -78,7 +78,7 @@ specified byte offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_float32" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#477-487">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_float32" class="fn">get_float32</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.7 DataView.prototype.getBigUint64 ( byteOffset [ , littleEndian ] )</code></p>
 <p>The <code>getFloat32()</code> method gets a signed 32-bit float (float) at the specified byte offset
 from the start of the <code>DataView</code>.</p>
@@ -90,7 +90,7 @@ from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_float64" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#500-510">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_float64" class="fn">get_float64</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.8 DataView.prototype.getFloat64 ( byteOffset [ , littleEndian ] )</code></p>
 <p>The <code>getFloat64()</code> method gets a signed 64-bit float (double) at the specified byte offset
 from the start of the <code>DataView</code>.</p>
@@ -102,7 +102,7 @@ from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_int8" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#523-533">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_int8" class="fn">get_int8</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.9 DataView.prototype.getInt8 ( byteOffset [ , littleEndian ] )</code></p>
 <p>The <code>getInt8()</code> method gets a signed 8-bit integer (byte) at the specified byte offset
 from the start of the <code>DataView</code>.</p>
@@ -114,7 +114,7 @@ from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_int16" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#546-556">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_int16" class="fn">get_int16</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.10 DataView.prototype.getInt16 ( byteOffset [ , littleEndian ] )</code></p>
 <p>The <code>getInt16()</code> method gets a signed 16-bit integer (short) at the specified byte offset
 from the start of the <code>DataView</code>.</p>
@@ -126,7 +126,7 @@ from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_int32" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#569-579">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_int32" class="fn">get_int32</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.11 DataView.prototype.getInt32 ( byteOffset [ , littleEndian ] )</code></p>
 <p>The <code>getInt32()</code> method gets a signed 32-bit integer (long) at the specified byte offset
 from the start of the <code>DataView</code>.</p>
@@ -138,7 +138,7 @@ from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_uint8" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#592-602">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_uint8" class="fn">get_uint8</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.12 DataView.prototype.getUint8 ( byteOffset [ , littleEndian ] )</code></p>
 <p>The <code>getUint8()</code> method gets an unsigned 8-bit integer (unsigned byte) at the specified
 byte offset from the start of the <code>DataView</code>.</p>
@@ -150,7 +150,7 @@ byte offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_uint16" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#615-625">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_uint16" class="fn">get_uint16</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.13 DataView.prototype.getUint16 ( byteOffset [ , littleEndian ] )</code></p>
 <p>The <code>getUint16()</code> method gets an unsigned 16-bit integer (unsigned short) at the specified
 byte offset from the start of the <code>DataView</code>.</p>
@@ -162,7 +162,7 @@ byte offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_uint32" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#638-648">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_uint32" class="fn">get_uint32</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.14 DataView.prototype.getUint32 ( byteOffset [ , littleEndian ] )</code></p>
 <p>The <code>getUint32()</code> method gets an unsigned 32-bit integer (unsigned long) at the specified
 byte offset from the start of the <code>DataView</code>.</p>
@@ -176,7 +176,7 @@ byte offset from the start of the <code>DataView</code>.</p>
     request_index: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     is_little_endian: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     value: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.1.1 SetViewValue ( view, requestIndex, isLittleEndian, type )</code></p>
 <p>The abstract operation <code>SetViewValue</code> takes arguments view, requestIndex, <code>isLittleEndian</code>,
 type, and value. It is used by functions on <code>DataView</code> instances to store values into the
@@ -188,7 +188,7 @@ view’s buffer.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.set_big_int64" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#745-756">source</a><h4 class="code-header">pub(crate) fn <a href="#method.set_big_int64" class="fn">set_big_int64</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.15 DataView.prototype.setBigInt64 ( byteOffset, value [ , littleEndian ] )</code></p>
 <p>The <code>setBigInt64()</code> method stores a signed 64-bit integer (long long) value at the
 specified byte offset from the start of the <code>DataView</code>.</p>
@@ -200,7 +200,7 @@ specified byte offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.set_big_uint64" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#769-780">source</a><h4 class="code-header">pub(crate) fn <a href="#method.set_big_uint64" class="fn">set_big_uint64</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.16 DataView.prototype.setBigUint64 ( byteOffset, value [ , littleEndian ] )</code></p>
 <p>The <code>setBigUint64()</code> method stores an unsigned 64-bit integer (unsigned long long) value at
 the specified byte offset from the start of the <code>DataView</code>.</p>
@@ -212,7 +212,7 @@ the specified byte offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.set_float32" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#793-804">source</a><h4 class="code-header">pub(crate) fn <a href="#method.set_float32" class="fn">set_float32</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.17 DataView.prototype.setFloat32 ( byteOffset, value [ , littleEndian ] )</code></p>
 <p>The <code>setFloat32()</code> method stores a signed 32-bit float (float) value at the specified byte
 offset from the start of the <code>DataView</code>.</p>
@@ -224,7 +224,7 @@ offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.set_float64" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#817-828">source</a><h4 class="code-header">pub(crate) fn <a href="#method.set_float64" class="fn">set_float64</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.18 DataView.prototype.setFloat64 ( byteOffset, value [ , littleEndian ] )</code></p>
 <p>The <code>setFloat64()</code> method stores a signed 64-bit float (double) value at the specified byte
 offset from the start of the <code>DataView</code>.</p>
@@ -236,7 +236,7 @@ offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.set_int8" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#841-852">source</a><h4 class="code-header">pub(crate) fn <a href="#method.set_int8" class="fn">set_int8</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.19 DataView.prototype.setInt8 ( byteOffset, value [ , littleEndian ] )</code></p>
 <p>The <code>setInt8()</code> method stores a signed 8-bit integer (byte) value at the specified byte
 offset from the start of the <code>DataView</code>.</p>
@@ -248,7 +248,7 @@ offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.set_int16" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#865-876">source</a><h4 class="code-header">pub(crate) fn <a href="#method.set_int16" class="fn">set_int16</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.20 DataView.prototype.setInt16 ( byteOffset, value [ , littleEndian ] )</code></p>
 <p>The <code>setInt16()</code> method stores a signed 16-bit integer (short) value at the specified byte
 offset from the start of the <code>DataView</code>.</p>
@@ -260,7 +260,7 @@ offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.set_int32" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#889-900">source</a><h4 class="code-header">pub(crate) fn <a href="#method.set_int32" class="fn">set_int32</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.21 DataView.prototype.setInt32 ( byteOffset, value [ , littleEndian ] )</code></p>
 <p>The <code>setInt32()</code> method stores a signed 32-bit integer (long) value at the specified byte
 offset from the start of the <code>DataView</code>.</p>
@@ -272,7 +272,7 @@ offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.set_uint8" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#913-924">source</a><h4 class="code-header">pub(crate) fn <a href="#method.set_uint8" class="fn">set_uint8</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.22 DataView.prototype.setUint8 ( byteOffset, value [ , littleEndian ] )</code></p>
 <p>The <code>setUint8()</code> method stores an unsigned 8-bit integer (byte) value at the specified byte
 offset from the start of the <code>DataView</code>.</p>
@@ -284,7 +284,7 @@ offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.set_uint16" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#937-948">source</a><h4 class="code-header">pub(crate) fn <a href="#method.set_uint16" class="fn">set_uint16</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.23 DataView.prototype.setUint16 ( byteOffset, value [ , littleEndian ] )</code></p>
 <p>The <code>setUint16()</code> method stores an unsigned 16-bit integer (unsigned short) value at the
 specified byte offset from the start of the <code>DataView</code>.</p>
@@ -296,7 +296,7 @@ specified byte offset from the start of the <code>DataView</code>.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.set_uint32" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#961-972">source</a><h4 class="code-header">pub(crate) fn <a href="#method.set_uint32" class="fn">set_uint32</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.4.24 DataView.prototype.setUint32 ( byteOffset, value [ , littleEndian ] )</code></p>
 <p>The <code>setUint32()</code> method stores an unsigned 32-bit integer (unsigned long) value at the
 specified byte offset from the start of the <code>DataView</code>.</p>
@@ -308,7 +308,7 @@ specified byte offset from the start of the <code>DataView</code>.</p>
 </div></details></div></details></div><h2 id="trait-implementations" class="small-section-header">Trait Implementations<a href="#trait-implementations" class="anchor">§</a></h2><div id="trait-implementations-list"><details class="toggle implementors-toggle" open><summary><section id="impl-BuiltInConstructor-for-DataView" class="impl"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#114-225">source</a><a href="#impl-BuiltInConstructor-for-DataView" class="anchor">§</a><h3 class="code-header">impl <a class="trait" href="../trait.BuiltInConstructor.html" title="trait boa_engine::builtins::BuiltInConstructor">BuiltInConstructor</a> for <a class="struct" href="struct.DataView.html" title="struct boa_engine::builtins::dataview::DataView">DataView</a></h3></section></summary><div class="impl-items"><details class="toggle method-toggle" open><summary><section id="method.constructor" class="method trait-impl"><a class="src rightside" href="../../../src/boa_engine/builtins/dataview/mod.rs.html#131-224">source</a><a href="#method.constructor" class="anchor">§</a><h4 class="code-header">fn <a href="../trait.BuiltInConstructor.html#tymethod.constructor" class="fn">constructor</a>(
     new_target: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>25.3.2.1 DataView ( buffer [ , byteOffset [ , byteLength ] ] )</code></p>
 <p>The <code>DataView</code> view provides a low-level interface for reading and writing multiple number
 types in a binary <code>ArrayBuffer</code>, without having to care about the platform’s endianness.</p>

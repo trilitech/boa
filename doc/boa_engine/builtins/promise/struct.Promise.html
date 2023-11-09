@@ -9,14 +9,14 @@
 </div></details><details class="toggle method-toggle" open><summary><section id="method.with_resolvers" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#475-502">source</a><h4 class="code-header">pub(crate) fn <a href="#method.with_resolvers" class="fn">with_resolvers</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     _args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><a href="https://tc39.es/proposal-promise-with-resolvers/#sec-promise.withResolvers"><code>Promise.withResolvers ( )</code></a></p>
 <p>Creates a new promise that is pending, and returns that promise plus the resolve and reject
 functions associated with it.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.all" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#512-563">source</a><h4 class="code-header">pub(crate) fn <a href="#method.all" class="fn">all</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Promise.all ( iterable )</code></p>
 <p>More information:</p>
 <ul>
@@ -28,7 +28,7 @@ functions associated with it.</p>
     constructor: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
     result_capability: &amp;<a class="struct" href="struct.PromiseCapability.html" title="struct boa_engine::builtins::promise::PromiseCapability">PromiseCapability</a>,
     promise_resolve: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>&gt;</h4></section></summary><div class="docblock"><p><code>PerformPromiseAll ( iteratorRecord, constructor, resultCapability, promiseResolve )</code></p>
 <p>More information:</p>
 <ul>
@@ -37,7 +37,7 @@ functions associated with it.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.all_settled" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#739-790">source</a><h4 class="code-header">pub(crate) fn <a href="#method.all_settled" class="fn">all_settled</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Promise.allSettled ( iterable )</code></p>
 <p>More information:</p>
 <ul>
@@ -49,7 +49,7 @@ functions associated with it.</p>
     constructor: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
     result_capability: &amp;<a class="struct" href="struct.PromiseCapability.html" title="struct boa_engine::builtins::promise::PromiseCapability">PromiseCapability</a>,
     promise_resolve: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>&gt;</h4></section></summary><div class="docblock"><p><code>PerformPromiseAllSettled ( iteratorRecord, constructor, resultCapability, promiseResolve )</code></p>
 <p>More information:</p>
 <ul>
@@ -58,7 +58,7 @@ functions associated with it.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.any" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1074-1125">source</a><h4 class="code-header">pub(crate) fn <a href="#method.any" class="fn">any</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Promise.any ( iterable )</code></p>
 <p>More information:</p>
 <ul>
@@ -70,7 +70,7 @@ functions associated with it.</p>
     constructor: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
     result_capability: &amp;<a class="struct" href="struct.PromiseCapability.html" title="struct boa_engine::builtins::promise::PromiseCapability">PromiseCapability</a>,
     promise_resolve: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>&gt;</h4></section></summary><div class="docblock"><p><code>PerformPromiseAny ( iteratorRecord, constructor, resultCapability, promiseResolve )</code></p>
 <p>More information:</p>
 <ul>
@@ -79,7 +79,7 @@ functions associated with it.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.race" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1315-1368">source</a><h4 class="code-header">pub(crate) fn <a href="#method.race" class="fn">race</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Promise.race ( iterable )</code></p>
 <p>The <code>race</code> function returns a new promise which is settled in the same way as the first
 passed promise to settle. It resolves all elements of the passed <code>iterable</code> to promises.</p>
@@ -93,7 +93,7 @@ passed promise to settle. It resolves all elements of the passed <code>iterable<
     constructor: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
     result_capability: &amp;<a class="struct" href="struct.PromiseCapability.html" title="struct boa_engine::builtins::promise::PromiseCapability">PromiseCapability</a>,
     promise_resolve: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>&gt;</h4></section></summary><div class="docblock"><p><code>PerformPromiseRace ( iteratorRecord, constructor, resultCapability, promiseResolve )</code></p>
 <p>The abstract operation <code>PerformPromiseRace</code> takes arguments <code>iteratorRecord</code>, <code>constructor</code>
 (a constructor), <code>resultCapability</code> (a <a href="struct.PromiseCapability.html" title="struct boa_engine::builtins::promise::PromiseCapability"><code>PromiseCapability</code></a> Record), and <code>promiseResolve</code>
@@ -106,7 +106,7 @@ language value or a throw completion.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.reject" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1431-1444">source</a><h4 class="code-header">pub(crate) fn <a href="#method.reject" class="fn">reject</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Promise.reject ( r )</code></p>
 <p>More information:</p>
 <ul>
@@ -116,12 +116,12 @@ language value or a throw completion.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.promise_reject" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1447-1465">source</a><h4 class="code-header">pub(crate) fn <a href="#method.promise_reject" class="fn">promise_reject</a>(
     c: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
     e: &amp;<a class="struct" href="../../struct.JsError.html" title="struct boa_engine::JsError">JsError</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>&gt;</h4></section></summary><div class="docblock"><p>Utility function to create a rejected promise.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.resolve" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1475-1490">source</a><h4 class="code-header">pub(crate) fn <a href="#method.resolve" class="fn">resolve</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Promise.resolve ( x )</code></p>
 <p>More information:</p>
 <ul>
@@ -131,7 +131,7 @@ language value or a throw completion.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.promise_resolve" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1502-1531">source</a><h4 class="code-header">pub(crate) fn <a href="#method.promise_resolve" class="fn">promise_resolve</a>(
     c: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
     x: <a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>&gt;</h4></section></summary><div class="docblock"><p><code>PromiseResolve ( C, x )</code></p>
 <p>The abstract operation <code>PromiseResolve</code> takes arguments <code>C</code> (a constructor) and <code>x</code> (an
 ECMAScript language value) and returns either a normal completion containing an ECMAScript
@@ -143,7 +143,7 @@ language value or a throw completion. It returns a new promise resolved with <co
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_species" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1544-1547">source</a><h4 class="code-header">fn <a href="#method.get_species" class="fn">get_species</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     _: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    _: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    _: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>get Promise [ @@species ]</code></p>
 <p>The <code>Promise [ @@species ]</code> accessor property returns the Promise constructor.</p>
 <p>More information:</p>
@@ -154,7 +154,7 @@ language value or a throw completion. It returns a new promise resolved with <co
 </div></details><details class="toggle method-toggle" open><summary><section id="method.catch" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1557-1572">source</a><h4 class="code-header">pub(crate) fn <a href="#method.catch" class="fn">catch</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Promise.prototype.catch ( onRejected )</code></p>
 <p>More information:</p>
 <ul>
@@ -164,7 +164,7 @@ language value or a throw completion. It returns a new promise resolved with <co
 </div></details><details class="toggle method-toggle" open><summary><section id="method.finally" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1582-1624">source</a><h4 class="code-header">pub(crate) fn <a href="#method.finally" class="fn">finally</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Promise.prototype.finally ( onFinally )</code></p>
 <p>More information:</p>
 <ul>
@@ -174,11 +174,11 @@ language value or a throw completion. It returns a new promise resolved with <co
 </div></details><section id="method.then_catch_finally_closures" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1626-1738">source</a><h4 class="code-header">pub(crate) fn <a href="#method.then_catch_finally_closures" class="fn">then_catch_finally_closures</a>(
     c: <a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
     on_finally: <a class="struct" href="../../object/builtins/jsfunction/struct.JsFunction.html" title="struct boa_engine::object::builtins::jsfunction::JsFunction">JsFunction</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; (<a class="struct" href="../../object/builtins/jsfunction/struct.JsFunction.html" title="struct boa_engine::object::builtins::jsfunction::JsFunction">JsFunction</a>, <a class="struct" href="../../object/builtins/jsfunction/struct.JsFunction.html" title="struct boa_engine::object::builtins::jsfunction::JsFunction">JsFunction</a>)</h4></section><details class="toggle method-toggle" open><summary><section id="method.then" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1748-1774">source</a><h4 class="code-header">pub(crate) fn <a href="#method.then" class="fn">then</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Promise.prototype.then ( onFulfilled, onRejected )</code></p>
 <p>More information:</p>
 <ul>
@@ -189,7 +189,7 @@ language value or a throw completion. It returns a new promise resolved with <co
     promise: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
     on_fulfilled: <a class="enum" href="https://doc.rust-lang.org/1.73.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../object/builtins/jsfunction/struct.JsFunction.html" title="struct boa_engine::object::builtins::jsfunction::JsFunction">JsFunction</a>&gt;,
     on_rejected: <a class="enum" href="https://doc.rust-lang.org/1.73.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../object/builtins/jsfunction/struct.JsFunction.html" title="struct boa_engine::object::builtins::jsfunction::JsFunction">JsFunction</a>&gt;,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>&gt;</h4></section></summary><div class="docblock"><p>Schedules callback functions for the eventual completion of <code>promise</code> — either fulfillment
 or rejection.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.perform_promise_then" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1809-1917">source</a><h4 class="code-header">pub(crate) fn <a href="#method.perform_promise_then" class="fn">perform_promise_then</a>(
@@ -197,7 +197,7 @@ or rejection.</p>
     on_fulfilled: <a class="enum" href="https://doc.rust-lang.org/1.73.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../object/builtins/jsfunction/struct.JsFunction.html" title="struct boa_engine::object::builtins::jsfunction::JsFunction">JsFunction</a>&gt;,
     on_rejected: <a class="enum" href="https://doc.rust-lang.org/1.73.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../object/builtins/jsfunction/struct.JsFunction.html" title="struct boa_engine::object::builtins::jsfunction::JsFunction">JsFunction</a>&gt;,
     result_capability: <a class="enum" href="https://doc.rust-lang.org/1.73.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="struct.PromiseCapability.html" title="struct boa_engine::builtins::promise::PromiseCapability">PromiseCapability</a>&gt;,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 )</h4></section></summary><div class="docblock"><p><code>PerformPromiseThen ( promise, onFulfilled, onRejected [ , resultCapability ] )</code></p>
 <p>More information:</p>
 <ul>
@@ -205,7 +205,7 @@ or rejection.</p>
 </ul>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.get_promise_resolve" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1929-1942">source</a><h4 class="code-header">pub(crate) fn <a href="#method.get_promise_resolve" class="fn">get_promise_resolve</a>(
     promise_constructor: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>&gt;</h4></section></summary><div class="docblock"><p><code>GetPromiseResolve ( promiseConstructor )</code></p>
 <p>The abstract operation <code>GetPromiseResolve</code> takes argument <code>promiseConstructor</code> (a
 constructor) and returns either a normal completion containing a function object or a throw
@@ -216,7 +216,7 @@ completion.</p>
 </ul>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.create_resolving_functions" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#1950-2223">source</a><h4 class="code-header">pub(crate) fn <a href="#method.create_resolving_functions" class="fn">create_resolving_functions</a>(
     promise: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="struct" href="struct.ResolvingFunctions.html" title="struct boa_engine::builtins::promise::ResolvingFunctions">ResolvingFunctions</a></h4></section></summary><div class="docblock"><p><code>CreateResolvingFunctions ( promise )</code></p>
 <p>More information:</p>
 <ul>
@@ -225,7 +225,7 @@ completion.</p>
 </div></details></div></details></div><h2 id="trait-implementations" class="small-section-header">Trait Implementations<a href="#trait-implementations" class="anchor">§</a></h2><div id="trait-implementations-list"><details class="toggle implementors-toggle" open><summary><section id="impl-BuiltInConstructor-for-Promise" class="impl"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#381-450">source</a><a href="#impl-BuiltInConstructor-for-Promise" class="anchor">§</a><h3 class="code-header">impl <a class="trait" href="../trait.BuiltInConstructor.html" title="trait boa_engine::builtins::BuiltInConstructor">BuiltInConstructor</a> for <a class="struct" href="struct.Promise.html" title="struct boa_engine::builtins::promise::Promise">Promise</a></h3></section></summary><div class="impl-items"><details class="toggle method-toggle" open><summary><section id="method.constructor" class="method trait-impl"><a class="src rightside" href="../../../src/boa_engine/builtins/promise/mod.rs.html#393-449">source</a><a href="#method.constructor" class="anchor">§</a><h4 class="code-header">fn <a href="../trait.BuiltInConstructor.html#tymethod.constructor" class="fn">constructor</a>(
     new_target: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Promise ( executor )</code></p>
 <p>More information:</p>
 <ul>

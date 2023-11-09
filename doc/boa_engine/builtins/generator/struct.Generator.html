@@ -5,7 +5,7 @@
 </div><h2 id="implementations" class="small-section-header">Implementations<a href="#implementations" class="anchor">§</a></h2><div id="implementations-list"><details class="toggle implementors-toggle" open><summary><section id="impl-Generator" class="impl"><a class="src rightside" href="../../../src/boa_engine/builtins/generator/mod.rs.html#164-412">source</a><a href="#impl-Generator" class="anchor">§</a><h3 class="code-header">impl <a class="struct" href="struct.Generator.html" title="struct boa_engine::builtins::generator::Generator">Generator</a></h3></section></summary><div class="impl-items"><section id="associatedconstant.NAME" class="associatedconstant"><a class="src rightside" href="../../../src/boa_engine/builtins/generator/mod.rs.html#165">source</a><h4 class="code-header">const <a href="#associatedconstant.NAME" class="constant">NAME</a>: <a class="struct" href="../../struct.JsString.html" title="struct boa_engine::JsString">JsString</a> = StaticJsStrings::GENERATOR</h4></section><details class="toggle method-toggle" open><summary><section id="method.next" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/generator/mod.rs.html#178-185">source</a><h4 class="code-header">pub(crate) fn <a href="#method.next" class="fn">next</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Generator.prototype.next ( value )</code></p>
 <p>The <code>next()</code> method returns an object with two properties done and value.
 You can also provide a parameter to the next method to send a value to the generator.</p>
@@ -17,7 +17,7 @@ You can also provide a parameter to the next method to send a value to the gener
 </div></details><details class="toggle method-toggle" open><summary><section id="method.return" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/generator/mod.rs.html#197-206">source</a><h4 class="code-header">pub(crate) fn <a href="#method.return" class="fn">return</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Generator.prototype.return ( value )</code></p>
 <p>The <code>return()</code> method returns the given value and finishes the generator.</p>
 <p>More information:</p>
@@ -28,7 +28,7 @@ You can also provide a parameter to the next method to send a value to the gener
 </div></details><details class="toggle method-toggle" open><summary><section id="method.throw" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/generator/mod.rs.html#219-232">source</a><h4 class="code-header">pub(crate) fn <a href="#method.throw" class="fn">throw</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>Generator.prototype.throw ( exception )</code></p>
 <p>The <code>throw()</code> method resumes the execution of a generator by throwing an error into it
 and returns an object with two properties done and value.</p>
@@ -40,7 +40,7 @@ and returns an object with two properties done and value.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.generator_resume" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/generator/mod.rs.html#240-316">source</a><h4 class="code-header">pub(crate) fn <a href="#method.generator_resume" class="fn">generator_resume</a>(
     gen: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     value: <a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>27.5.3.3 GeneratorResume ( generator, value, generatorBrand )</code></p>
 <p>More information:</p>
 <ul>
@@ -49,7 +49,7 @@ and returns an object with two properties done and value.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.generator_resume_abrupt" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/generator/mod.rs.html#324-411">source</a><h4 class="code-header">pub(crate) fn <a href="#method.generator_resume_abrupt" class="fn">generator_resume_abrupt</a>(
     gen: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     abrupt_completion: <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>27.5.3.4 GeneratorResumeAbrupt ( generator, abruptCompletion, generatorBrand )</code></p>
 <p>More information:</p>
 <ul>

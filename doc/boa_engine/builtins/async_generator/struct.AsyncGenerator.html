@@ -9,7 +9,7 @@
 </div><h2 id="implementations" class="small-section-header">Implementations<a href="#implementations" class="anchor">§</a></h2><div id="implementations-list"><details class="toggle implementors-toggle" open><summary><section id="impl-AsyncGenerator" class="impl"><a class="src rightside" href="../../../src/boa_engine/builtins/async_generator/mod.rs.html#108-697">source</a><a href="#impl-AsyncGenerator" class="anchor">§</a><h3 class="code-header">impl <a class="struct" href="struct.AsyncGenerator.html" title="struct boa_engine::builtins::async_generator::AsyncGenerator">AsyncGenerator</a></h3></section></summary><div class="impl-items"><section id="associatedconstant.NAME" class="associatedconstant"><a class="src rightside" href="../../../src/boa_engine/builtins/async_generator/mod.rs.html#109">source</a><h4 class="code-header">const <a href="#associatedconstant.NAME" class="constant">NAME</a>: <a class="struct" href="../../struct.JsString.html" title="struct boa_engine::JsString">JsString</a> = StaticJsStrings::ASYNC_GENERATOR</h4></section><details class="toggle method-toggle" open><summary><section id="method.next" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/async_generator/mod.rs.html#117-197">source</a><h4 class="code-header">pub(crate) fn <a href="#method.next" class="fn">next</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>AsyncGenerator.prototype.next ( value )</code></p>
 <p>More information:</p>
 <ul>
@@ -18,7 +18,7 @@
 </div></details><details class="toggle method-toggle" open><summary><section id="method.return" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/async_generator/mod.rs.html#205-275">source</a><h4 class="code-header">pub(crate) fn <a href="#method.return" class="fn">return</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>AsyncGenerator.prototype.return ( value )</code></p>
 <p>More information:</p>
 <ul>
@@ -27,7 +27,7 @@
 </div></details><details class="toggle method-toggle" open><summary><section id="method.throw" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/async_generator/mod.rs.html#283-372">source</a><h4 class="code-header">pub(crate) fn <a href="#method.throw" class="fn">throw</a>(
     this: &amp;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
     args: &amp;[<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>],
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 ) -&gt; <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;</h4></section></summary><div class="docblock"><p><code>AsyncGenerator.prototype.throw ( exception )</code></p>
 <p>More information:</p>
 <ul>
@@ -47,7 +47,7 @@
     completion: <a class="type" href="../../type.JsResult.html" title="type boa_engine::JsResult">JsResult</a>&lt;<a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>&gt;,
     done: <a class="primitive" href="https://doc.rust-lang.org/1.73.0/std/primitive.bool.html">bool</a>,
     realm: <a class="enum" href="https://doc.rust-lang.org/1.73.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../realm/struct.Realm.html" title="struct boa_engine::realm::Realm">Realm</a>&gt;,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 )</h4></section></summary><div class="docblock"><p><code>AsyncGeneratorCompleteStep ( generator, completion, done [ , realm ] )</code></p>
 <p>More information:</p>
 <ul>
@@ -58,7 +58,7 @@
     state: <a class="enum" href="enum.AsyncGeneratorState.html" title="enum boa_engine::builtins::async_generator::AsyncGeneratorState">AsyncGeneratorState</a>,
     generator_context: <a class="struct" href="../generator/struct.GeneratorContext.html" title="struct boa_engine::builtins::generator::GeneratorContext">GeneratorContext</a>,
     completion: <a class="enum" href="../../vm/completion_record/enum.CompletionRecord.html" title="enum boa_engine::vm::completion_record::CompletionRecord">CompletionRecord</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 )</h4></section></summary><div class="docblock"><p><code>AsyncGeneratorResume ( generator, completion )</code></p>
 <p>More information:</p>
 <ul>
@@ -67,13 +67,13 @@
 </div></details><details class="toggle method-toggle" open><summary><section id="method.await_return" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/async_generator/mod.rs.html#519-634">source</a><h4 class="code-header">pub(crate) fn <a href="#method.await_return" class="fn">await_return</a>(
     generator: <a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>,
     value: <a class="enum" href="../../enum.JsValue.html" title="enum boa_engine::JsValue">JsValue</a>,
-    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;
+    context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>
 )</h4></section></summary><div class="docblock"><p><code>AsyncGeneratorAwaitReturn ( generator )</code></p>
 <p>More information:</p>
 <ul>
 <li><a href="https://tc39.es/ecma262/#sec-asyncgeneratorawaitreturn">ECMAScript reference</a></li>
 </ul>
-</div></details><details class="toggle method-toggle" open><summary><section id="method.drain_queue" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/async_generator/mod.rs.html#642-696">source</a><h4 class="code-header">pub(crate) fn <a href="#method.drain_queue" class="fn">drain_queue</a>(generator: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>, context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>&lt;'_&gt;)</h4></section></summary><div class="docblock"><p><code>AsyncGeneratorDrainQueue ( generator )</code></p>
+</div></details><details class="toggle method-toggle" open><summary><section id="method.drain_queue" class="method"><a class="src rightside" href="../../../src/boa_engine/builtins/async_generator/mod.rs.html#642-696">source</a><h4 class="code-header">pub(crate) fn <a href="#method.drain_queue" class="fn">drain_queue</a>(generator: &amp;<a class="struct" href="../../object/jsobject/struct.JsObject.html" title="struct boa_engine::object::jsobject::JsObject">JsObject</a>, context: &amp;mut <a class="struct" href="../../struct.Context.html" title="struct boa_engine::Context">Context</a>)</h4></section></summary><div class="docblock"><p><code>AsyncGeneratorDrainQueue ( generator )</code></p>
 <p>More information:</p>
 <ul>
 <li><a href="https://tc39.es/ecma262/#sec-asyncgeneratordrainqueue">ECMAScript reference</a></li>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `boa_engine/src/builtins/regexp/mod.rs`."><title>mod.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../../static.files/rustdoc-cb6f1f67f1bcd037.css" id="mainThemeStyle"><meta name="rustdoc-vars" data-root-path="../../../../" data-static-root-path="../../../../static.files/" data-current-crate="boa_engine" data-themes="" data-resource-suffix="" data-rustdoc-version="1.73.0 (cc66ad468 2023-10-03)" data-channel="1.73.0" data-search-js="search-6dfdfced5eff6596.js" data-settings-js="settings-de11bff964e9d4e5.js" data-settings-css="settings-8c76f75bfb6bd192.css" data-theme-light-css="light-1596385f77d47ef2.css" data-theme-dark-css="dark-0a43001d3fc2282c.css" data-theme-ayu-css="ayu-fd19013d6ce078bf.css" ><script src="../../../../static.files/storage-db41da1a38ea3cb8.js"></script><script defer src="../../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../../src-files.js"></script><script defer src="../../../../static.files/main-0795b7d26be81095.js"></script><noscript><link rel="stylesheet" media="(prefers-color-scheme:light)" href="../../../../static.files/light-1596385f77d47ef2.css"><link rel="stylesheet" media="(prefers-color-scheme:dark)" href="../../../../static.files/dark-0a43001d3fc2282c.css"><link rel="stylesheet" href="../../../../static.files/noscript-cffde32267a19fd6.css"></noscript><link rel="icon" href="https://raw.githubusercontent.com/boa-dev/boa/main/assets/logo.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../../../boa_engine/index.html"><img src="https://raw.githubusercontent.com/boa-dev/boa/main/assets/logo.svg" alt="logo"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `boa_engine/src/builtins/regexp/mod.rs`."><title>mod.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../../../static.files/rustdoc-fa3bb1812debf86c.css"><meta name="rustdoc-vars" data-root-path="../../../../" data-static-root-path="../../../../static.files/" data-current-crate="boa_engine" data-themes="" data-resource-suffix="" data-rustdoc-version="1.74.0 (79e9716c9 2023-11-13)" data-channel="1.74.0" data-search-js="search-8be46b629f5f14a8.js" data-settings-js="settings-74424d7eec62a23e.js" ><script src="../../../../static.files/storage-fec3eaa3851e447d.js"></script><script defer src="../../../../static.files/src-script-3280b574d94e47b4.js"></script><script defer src="../../../../src-files.js"></script><script defer src="../../../../static.files/main-c5bd66d33317d69f.js"></script><noscript><link rel="stylesheet" href="../../../../static.files/noscript-5d8b3c7633ad77ba.css"></noscript><link rel="icon" href="https://raw.githubusercontent.com/boa-dev/boa/main/assets/logo.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../../../boa_engine/index.html"><img src="https://raw.githubusercontent.com/boa-dev/boa/main/assets/logo.svg" alt="logo"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><div data-nosnippet><pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -1920,9 +1920,6 @@
 <a href="#1920" id="1920">1920</a>
 <a href="#1921" id="1921">1921</a>
 <a href="#1922" id="1922">1922</a>
-<a href="#1923" id="1923">1923</a>
-<a href="#1924" id="1924">1924</a>
-<a href="#1925" id="1925">1925</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! Boa&#39;s implementation of ECMAScript&#39;s global `RegExp` object.
 //!
 //! The `RegExp` object is used for matching text with a pattern.
@@ -3115,79 +3112,76 @@
         context: <span class="kw-2">&amp;mut </span>Context,
     ) -&gt; JsResult&lt;JsValue&gt; {
         <span class="comment">// 1. Let rx be the this value.
-        // 2. If Type(rx) is not Object, throw a TypeError exception.
-        </span><span class="kw">let </span>rx = this.as_object().ok_or_else(|| {
-            JsNativeError::typ()
+        // 2. If rx is not an Object, throw a TypeError exception.
+        </span><span class="kw">let </span><span class="prelude-val">Some</span>(rx) = this.as_object() <span class="kw">else </span>{
+            <span class="kw">return </span><span class="prelude-val">Err</span>(JsNativeError::typ()
                 .with_message(<span class="string">&quot;RegExp.prototype.match method called on incompatible value&quot;</span>)
-        })<span class="question-mark">?</span>;
+                .into());
+        };
 
         <span class="comment">// 3. Let S be ? ToString(string).
         </span><span class="kw">let </span>arg_str = args.get_or_undefined(<span class="number">0</span>).to_string(context)<span class="question-mark">?</span>;
 
-        <span class="comment">// 4. Let global be ! ToBoolean(? Get(rx, &quot;global&quot;)).
-        </span><span class="kw">let </span>global = rx.get(<span class="macro">utf16!</span>(<span class="string">&quot;global&quot;</span>), context)<span class="question-mark">?</span>.to_boolean();
+        <span class="comment">// 4. Let flags be ? ToString(? Get(rx, &quot;flags&quot;)).
+        </span><span class="kw">let </span>flags = rx.get(<span class="macro">utf16!</span>(<span class="string">&quot;flags&quot;</span>), context)<span class="question-mark">?</span>.to_string(context)<span class="question-mark">?</span>;
 
-        <span class="comment">// 5. If global is false, then
-        </span><span class="attr">#[allow(clippy::if_not_else)]
-        </span><span class="kw">if </span>!global {
+        <span class="comment">// 5. If flags does not contain &quot;g&quot;, then
+        </span><span class="kw">if </span>!flags.contains(<span class="kw-2">&amp;</span><span class="number">103</span>) {
             <span class="comment">// a. Return ? RegExpExec(rx, S).
-            </span>(<span class="self">Self</span>::abstract_exec(rx, arg_str, context)<span class="question-mark">?</span>)
-                .map_or_else(|| <span class="prelude-val">Ok</span>(JsValue::null()), |v| <span class="prelude-val">Ok</span>(v.into()))
+            </span><span class="kw">return </span>(<span class="self">Self</span>::abstract_exec(rx, arg_str, context)<span class="question-mark">?</span>)
+                .map_or_else(|| <span class="prelude-val">Ok</span>(JsValue::null()), |v| <span class="prelude-val">Ok</span>(v.into()));
+        }
+
         <span class="comment">// 6. Else,
-        </span>} <span class="kw">else </span>{
-            <span class="comment">// a. Assert: global is true.
 
-            // b. Let fullUnicode be ! ToBoolean(? Get(rx, &quot;unicode&quot;)).
-            </span><span class="kw">let </span>unicode = rx.get(<span class="macro">utf16!</span>(<span class="string">&quot;unicode&quot;</span>), context)<span class="question-mark">?</span>.to_boolean();
+        // a. If flags contains &quot;u&quot; or flags contains &quot;v&quot;, let fullUnicode be true. Otherwise, let fullUnicode be false.
+        </span><span class="kw">let </span>full_unicode = flags.contains(<span class="kw-2">&amp;</span><span class="number">117</span>) || flags.contains(<span class="kw-2">&amp;</span><span class="number">118</span>);
 
-            <span class="comment">// c. Perform ? Set(rx, &quot;lastIndex&quot;, +0𝔽, true).
-            </span>rx.set(<span class="macro">utf16!</span>(<span class="string">&quot;lastIndex&quot;</span>), <span class="number">0</span>, <span class="bool-val">true</span>, context)<span class="question-mark">?</span>;
+        <span class="comment">// b. Perform ? Set(rx, &quot;lastIndex&quot;, +0𝔽, true).
+        </span>rx.set(<span class="macro">utf16!</span>(<span class="string">&quot;lastIndex&quot;</span>), <span class="number">0</span>, <span class="bool-val">true</span>, context)<span class="question-mark">?</span>;
 
-            <span class="comment">// d. Let A be ! ArrayCreate(0).
-            </span><span class="kw">let </span>a =
-                Array::array_create(<span class="number">0</span>, <span class="prelude-val">None</span>, context).expect(<span class="string">&quot;this ArrayCreate call must not fail&quot;</span>);
+        <span class="comment">// c. Let A be ! ArrayCreate(0).
+        </span><span class="kw">let </span>a = Array::array_create(<span class="number">0</span>, <span class="prelude-val">None</span>, context).expect(<span class="string">&quot;this ArrayCreate call must not fail&quot;</span>);
 
-            <span class="comment">// e. Let n be 0.
-            </span><span class="kw">let </span><span class="kw-2">mut </span>n = <span class="number">0</span>;
+        <span class="comment">// d. Let n be 0.
+        </span><span class="kw">let </span><span class="kw-2">mut </span>n = <span class="number">0</span>;
 
-            <span class="comment">// f. Repeat,
-            </span><span class="kw">loop </span>{
-                <span class="comment">// i. Let result be ? RegExpExec(rx, S).
-                </span><span class="kw">let </span>result = <span class="self">Self</span>::abstract_exec(rx, arg_str.clone(), context)<span class="question-mark">?</span>;
+        <span class="comment">// e. Repeat,
+        </span><span class="kw">loop </span>{
+            <span class="comment">// i. Let result be ? RegExpExec(rx, S).
+            </span><span class="kw">let </span>result = <span class="self">Self</span>::abstract_exec(rx, arg_str.clone(), context)<span class="question-mark">?</span>;
 
-                <span class="comment">// ii. If result is null, then
-                // iii. Else,
-                </span><span class="kw">if let </span><span class="prelude-val">Some</span>(result) = result {
-                    <span class="comment">// 1. Let matchStr be ? ToString(? Get(result, &quot;0&quot;)).
-                    </span><span class="kw">let </span>match_str = result.get(<span class="number">0</span>, context)<span class="question-mark">?</span>.to_string(context)<span class="question-mark">?</span>;
+            <span class="comment">// ii. If result is null, then
+            // iii. Else,
+            </span><span class="kw">if let </span><span class="prelude-val">Some</span>(result) = result {
+                <span class="comment">// 1. Let matchStr be ? ToString(? Get(result, &quot;0&quot;)).
+                </span><span class="kw">let </span>match_str = result.get(<span class="number">0</span>, context)<span class="question-mark">?</span>.to_string(context)<span class="question-mark">?</span>;
 
-                    <span class="comment">// 2. Perform ! CreateDataPropertyOrThrow(A, ! ToString(𝔽(n)), matchStr).
-                    </span>a.create_data_property_or_throw(n, match_str.clone(), context)
-                        .expect(<span class="string">&quot;this CreateDataPropertyOrThrow call must not fail&quot;</span>);
+                <span class="comment">// 2. Perform ! CreateDataPropertyOrThrow(A, ! ToString(𝔽(n)), matchStr).
+                </span>a.create_data_property_or_throw(n, match_str.clone(), context)
+                    .expect(<span class="string">&quot;this CreateDataPropertyOrThrow call must not fail&quot;</span>);
 
-                    <span class="comment">// 3. If matchStr is the empty String, then
-                    </span><span class="kw">if </span>match_str.is_empty() {
-                        <span class="comment">// a. Let thisIndex be ℝ(? ToLength(? Get(rx, &quot;lastIndex&quot;))).
-                        </span><span class="kw">let </span>this_index =
-                            rx.get(<span class="macro">utf16!</span>(<span class="string">&quot;lastIndex&quot;</span>), context)<span class="question-mark">?</span>.to_length(context)<span class="question-mark">?</span>;
+                <span class="comment">// 3. If matchStr is the empty String, then
+                </span><span class="kw">if </span>match_str.is_empty() {
+                    <span class="comment">// a. Let thisIndex be ℝ(? ToLength(? Get(rx, &quot;lastIndex&quot;))).
+                    </span><span class="kw">let </span>this_index = rx.get(<span class="macro">utf16!</span>(<span class="string">&quot;lastIndex&quot;</span>), context)<span class="question-mark">?</span>.to_length(context)<span class="question-mark">?</span>;
 
-                        <span class="comment">// b. Let nextIndex be AdvanceStringIndex(S, thisIndex, fullUnicode).
-                        </span><span class="kw">let </span>next_index = advance_string_index(<span class="kw-2">&amp;</span>arg_str, this_index, unicode);
+                    <span class="comment">// b. Let nextIndex be AdvanceStringIndex(S, thisIndex, fullUnicode).
+                    </span><span class="kw">let </span>next_index = advance_string_index(<span class="kw-2">&amp;</span>arg_str, this_index, full_unicode);
 
-                        <span class="comment">// c. Perform ? Set(rx, &quot;lastIndex&quot;, 𝔽(nextIndex), true).
-                        </span>rx.set(<span class="macro">utf16!</span>(<span class="string">&quot;lastIndex&quot;</span>), JsValue::new(next_index), <span class="bool-val">true</span>, context)<span class="question-mark">?</span>;
-                    }
-
-                    <span class="comment">// 4. Set n to n + 1.
-                    </span>n += <span class="number">1</span>;
-                } <span class="kw">else </span>{
-                    <span class="comment">// 1. If n = 0, return null.
-                    </span><span class="kw">if </span>n == <span class="number">0 </span>{
-                        <span class="kw">return </span><span class="prelude-val">Ok</span>(JsValue::null());
-                    }
-                    <span class="comment">// 2. Return A.
-                    </span><span class="kw">return </span><span class="prelude-val">Ok</span>(a.into());
+                    <span class="comment">// c. Perform ? Set(rx, &quot;lastIndex&quot;, 𝔽(nextIndex), true).
+                    </span>rx.set(<span class="macro">utf16!</span>(<span class="string">&quot;lastIndex&quot;</span>), JsValue::new(next_index), <span class="bool-val">true</span>, context)<span class="question-mark">?</span>;
                 }
+
+                <span class="comment">// 4. Set n to n + 1.
+                </span>n += <span class="number">1</span>;
+            } <span class="kw">else </span>{
+                <span class="comment">// 1. If n = 0, return null.
+                </span><span class="kw">if </span>n == <span class="number">0 </span>{
+                    <span class="kw">return </span><span class="prelude-val">Ok</span>(JsValue::null());
+                }
+                <span class="comment">// 2. Return A.
+                </span><span class="kw">return </span><span class="prelude-val">Ok</span>(a.into());
             }
         }
     }

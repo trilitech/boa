@@ -141,6 +141,7 @@
 <a href="#141" id="141">141</a>
 <a href="#142" id="142">142</a>
 <a href="#143" id="143">143</a>
+<a href="#144" id="144">144</a>
 </pre></div><pre class="rust"><code><span class="kw">use </span>std::{
     fs::File,
     io::{<span class="self">self</span>, BufReader, Read},
@@ -233,7 +234,7 @@
 <span class="attr">#[cfg(test)]
 </span><span class="kw">mod </span>tests {
     <span class="kw">use super</span>::<span class="kw-2">*</span>;
-    <span class="kw">use </span>std::{fs, io::Cursor};
+    <span class="kw">use </span>std::io::Cursor;
 
     <span class="attr">#[test]
     </span><span class="kw">fn </span>from_bytes() {
@@ -249,15 +250,16 @@
 
     <span class="attr">#[test]
     </span><span class="kw">fn </span>from_filepath() {
-        fs::write(<span class="string">&quot;test.js&quot;</span>, <span class="string">&quot;&#39;Hello&#39; + &#39;World&#39;;&quot;</span>).unwrap();
-        <span class="kw">let </span><span class="kw-2">mut </span>source = Source::from_filepath(<span class="string">&quot;test.js&quot;</span>.as_ref()).unwrap();
+        <span class="kw">let </span>manifest_path = Path::new(<span class="macro">env!</span>(<span class="string">&quot;CARGO_MANIFEST_DIR&quot;</span>));
+        <span class="kw">let </span>filepath = manifest_path.join(<span class="string">&quot;src/parser/tests/test.js&quot;</span>);
+        <span class="kw">let </span><span class="kw-2">mut </span>source = Source::from_filepath(<span class="kw-2">&amp;</span>filepath).unwrap();
 
-        <span class="macro">assert_eq!</span>(source.path, <span class="prelude-val">Some</span>(<span class="string">&quot;test.js&quot;</span>.as_ref()));
+        <span class="macro">assert_eq!</span>(source.path, <span class="prelude-val">Some</span>(<span class="kw-2">&amp;*</span>filepath));
 
         <span class="kw">let </span><span class="kw-2">mut </span>content = String::new();
         source.reader.read_to_string(<span class="kw-2">&amp;mut </span>content).unwrap();
 
-        <span class="macro">assert_eq!</span>(content, <span class="string">&quot;&#39;Hello&#39; + &#39;World&#39;;&quot;</span>);
+        <span class="macro">assert_eq!</span>(content, <span class="string">&quot;\&quot;Hello\&quot; + \&quot;World\&quot;;\n&quot;</span>);
     }
 
     <span class="attr">#[test]

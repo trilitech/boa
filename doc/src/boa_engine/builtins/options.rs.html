@@ -217,6 +217,9 @@
 <a href="#217" id="217">217</a>
 <a href="#218" id="218">218</a>
 <a href="#219" id="219">219</a>
+<a href="#220" id="220">220</a>
+<a href="#221" id="221">221</a>
+<a href="#222" id="222">222</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! Utilities to parse, validate and get options in builtins.
 
 </span><span class="kw">use </span>std::{fmt, str::FromStr};
@@ -343,53 +346,6 @@
     HalfEven,
 }
 
-<span class="attr">#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-</span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">enum </span>UnsignedRoundingMode {
-    Infinity,
-    Zero,
-    HalfInfinity,
-    HalfZero,
-    HalfEven,
-}
-
-<span class="kw">impl </span>RoundingMode {
-    <span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">const fn </span>negate(<span class="self">self</span>) -&gt; <span class="self">Self </span>{
-        <span class="kw">use </span>RoundingMode::{
-            Ceil, Expand, Floor, HalfCeil, HalfEven, HalfExpand, HalfFloor, HalfTrunc, Trunc,
-        };
-
-        <span class="kw">match </span><span class="self">self </span>{
-            Ceil =&gt; <span class="self">Self</span>::Floor,
-            Floor =&gt; <span class="self">Self</span>::Ceil,
-            HalfCeil =&gt; <span class="self">Self</span>::HalfFloor,
-            HalfFloor =&gt; <span class="self">Self</span>::HalfCeil,
-            Trunc =&gt; <span class="self">Self</span>::Trunc,
-            Expand =&gt; <span class="self">Self</span>::Expand,
-            HalfTrunc =&gt; <span class="self">Self</span>::HalfTrunc,
-            HalfExpand =&gt; <span class="self">Self</span>::HalfExpand,
-            HalfEven =&gt; <span class="self">Self</span>::HalfEven,
-        }
-    }
-
-    <span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">const fn </span>get_unsigned_round_mode(<span class="self">self</span>, is_negative: bool) -&gt; UnsignedRoundingMode {
-        <span class="kw">use </span>RoundingMode::{
-            Ceil, Expand, Floor, HalfCeil, HalfEven, HalfExpand, HalfFloor, HalfTrunc, Trunc,
-        };
-
-        <span class="kw">match </span><span class="self">self </span>{
-            Ceil <span class="kw">if </span>!is_negative =&gt; UnsignedRoundingMode::Infinity,
-            Ceil =&gt; UnsignedRoundingMode::Zero,
-            Floor <span class="kw">if </span>!is_negative =&gt; UnsignedRoundingMode::Zero,
-            Floor | Trunc | Expand =&gt; UnsignedRoundingMode::Infinity,
-            HalfCeil <span class="kw">if </span>!is_negative =&gt; UnsignedRoundingMode::HalfInfinity,
-            HalfCeil | HalfTrunc =&gt; UnsignedRoundingMode::HalfZero,
-            HalfFloor <span class="kw">if </span>!is_negative =&gt; UnsignedRoundingMode::HalfZero,
-            HalfFloor | HalfExpand =&gt; UnsignedRoundingMode::HalfInfinity,
-            HalfEven =&gt; UnsignedRoundingMode::HalfEven,
-        }
-    }
-}
-
 <span class="attr">#[derive(Debug)]
 </span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>ParseRoundingModeError;
 
@@ -434,6 +390,56 @@
             <span class="self">Self</span>::HalfEven =&gt; <span class="string">&quot;halfEven&quot;</span>,
         }
         .fmt(f)
+    }
+}
+
+<span class="attr">#[cfg(feature = <span class="string">&quot;temporal&quot;</span>)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+</span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">enum </span>UnsignedRoundingMode {
+    Infinity,
+    Zero,
+    HalfInfinity,
+    HalfZero,
+    HalfEven,
+}
+
+<span class="kw">impl </span>RoundingMode {
+    <span class="attr">#[cfg(feature = <span class="string">&quot;temporal&quot;</span>)]
+    </span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">const fn </span>negate(<span class="self">self</span>) -&gt; <span class="self">Self </span>{
+        <span class="kw">use </span>RoundingMode::{
+            Ceil, Expand, Floor, HalfCeil, HalfEven, HalfExpand, HalfFloor, HalfTrunc, Trunc,
+        };
+
+        <span class="kw">match </span><span class="self">self </span>{
+            Ceil =&gt; <span class="self">Self</span>::Floor,
+            Floor =&gt; <span class="self">Self</span>::Ceil,
+            HalfCeil =&gt; <span class="self">Self</span>::HalfFloor,
+            HalfFloor =&gt; <span class="self">Self</span>::HalfCeil,
+            Trunc =&gt; <span class="self">Self</span>::Trunc,
+            Expand =&gt; <span class="self">Self</span>::Expand,
+            HalfTrunc =&gt; <span class="self">Self</span>::HalfTrunc,
+            HalfExpand =&gt; <span class="self">Self</span>::HalfExpand,
+            HalfEven =&gt; <span class="self">Self</span>::HalfEven,
+        }
+    }
+
+    <span class="attr">#[cfg(feature = <span class="string">&quot;temporal&quot;</span>)]
+    </span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">const fn </span>get_unsigned_round_mode(<span class="self">self</span>, is_negative: bool) -&gt; UnsignedRoundingMode {
+        <span class="kw">use </span>RoundingMode::{
+            Ceil, Expand, Floor, HalfCeil, HalfEven, HalfExpand, HalfFloor, HalfTrunc, Trunc,
+        };
+
+        <span class="kw">match </span><span class="self">self </span>{
+            Ceil <span class="kw">if </span>!is_negative =&gt; UnsignedRoundingMode::Infinity,
+            Ceil =&gt; UnsignedRoundingMode::Zero,
+            Floor <span class="kw">if </span>!is_negative =&gt; UnsignedRoundingMode::Zero,
+            Floor | Trunc | Expand =&gt; UnsignedRoundingMode::Infinity,
+            HalfCeil <span class="kw">if </span>!is_negative =&gt; UnsignedRoundingMode::HalfInfinity,
+            HalfCeil | HalfTrunc =&gt; UnsignedRoundingMode::HalfZero,
+            HalfFloor <span class="kw">if </span>!is_negative =&gt; UnsignedRoundingMode::HalfZero,
+            HalfFloor | HalfExpand =&gt; UnsignedRoundingMode::HalfInfinity,
+            HalfEven =&gt; UnsignedRoundingMode::HalfEven,
+        }
     }
 }
 </code></pre></div></section></main></body></html>

@@ -447,14 +447,14 @@
 
     <span class="doccomment">/// Checks that we cannot create a position with 0 as the column.
     </span><span class="attr">#[test]
-    #[should_panic]
+    #[should_panic(expected = <span class="string">&quot;column number cannot be 0&quot;</span>)]
     </span><span class="kw">fn </span>invalid_position_column() {
         Position::new(<span class="number">10</span>, <span class="number">0</span>);
     }
 
     <span class="doccomment">/// Checks that we cannot create a position with 0 as the line.
     </span><span class="attr">#[test]
-    #[should_panic]
+    #[should_panic(expected = <span class="string">&quot;line number cannot be 0&quot;</span>)]
     </span><span class="kw">fn </span>invalid_position_line() {
         Position::new(<span class="number">0</span>, <span class="number">10</span>);
     }
@@ -501,7 +501,7 @@
 
     <span class="doccomment">/// Checks that we cannot create an invalid span.
     </span><span class="attr">#[test]
-    #[should_panic]
+    #[should_panic(expected = <span class="string">&quot;a span cannot start after its end&quot;</span>)]
     </span><span class="kw">fn </span>invalid_span() {
         <span class="kw">let </span>a = Position::new(<span class="number">10</span>, <span class="number">30</span>);
         <span class="kw">let </span>b = Position::new(<span class="number">10</span>, <span class="number">50</span>);

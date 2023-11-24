@@ -348,8 +348,10 @@
 <a href="#348" id="348">348</a>
 <a href="#349" id="349">349</a>
 <a href="#350" id="350">350</a>
+<a href="#351" id="351">351</a>
 </pre></div><pre class="rust"><code><span class="attr">#![deny(unsafe_op_in_unsafe_fn)]
 #![allow(clippy::cast_ptr_alignment)] </span><span class="comment">// Invariants are checked by the caller.
+</span><span class="attr">#![allow(unused_tuple_struct_fields)] </span><span class="comment">// Weird false-positive with `boa_macros_tests`
 
 </span><span class="kw">mod </span>atomic;
 

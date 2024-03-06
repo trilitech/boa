@@ -115,7 +115,9 @@ impl JsValue {
     pub fn to_json(&self, context: &mut Context) -> JsResult<Value> {
         match self {
             Self::Null => Ok(Value::Null),
-            Self::Undefined => todo!("undefined to JSON"),
+            Self::Undefined => Err(JsNativeError::typ()
+                .with_message("cannot convert undefined to JSON")
+                .into()),
             &Self::Boolean(b) => Ok(b.into()),
             Self::String(string) => Ok(string.to_std_string_escaped().into()),
             &Self::Rational(rat) => Ok(rat.into()),

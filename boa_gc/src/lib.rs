@@ -567,6 +567,18 @@ pub fn force_collect() {
     });
 }
 
+pub fn gc_reset() {
+    let new =  BoaGc {
+    config: GcConfig::default(),
+    runtime: GcRuntimeData::default(),
+    strong_start: Cell::new(None),
+    weak_start: Cell::new(None),
+    weak_map_start: Cell::new(None),
+};
+
+    BOA_GC.replace(new);
+}
+
 #[cfg(test)]
 mod test;
 

@@ -527,6 +527,13 @@ impl Context {
         Ok(self.enter_realm(old_realm))
     }
 
+    /// Get the remaining instruction count
+    #[cfg(feature = "fuzz")]
+    #[inline]
+    pub const fn instructions_remaining(&self) -> usize {
+        self.instructions_remaining
+    }
+    
     /// Get the [`RootShape`].
     #[inline]
     #[must_use]

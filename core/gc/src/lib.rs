@@ -569,6 +569,19 @@ impl Collector {
     }
 }
 
+/// Forcefully reset the garbage collector.
+pub fn gc_reset() {
+    let new = BoaGc {
+        config: GcConfig::default(),
+        runtime: GcRuntimeData::default(),
+        strongs: Vec::default(),
+        weaks: Vec::default(),
+        weak_maps: Vec::default(),
+    };
+
+    BOA_GC.replace(new);
+}
+
 /// Forcefully runs a garbage collection of all unaccessible nodes.
 pub fn force_collect() {
     BOA_GC.with(|current| {
